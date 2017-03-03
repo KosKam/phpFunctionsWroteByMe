@@ -3,7 +3,8 @@ if (isset($_POST["submit"])){
         
     $string = $_POST["text"];
     $stringToArr = explode(", ", $string);
-    
+        
+    // this is the function start
     $arr = [];
     $temp = "";
     
@@ -18,7 +19,8 @@ if (isset($_POST["submit"])){
             }
         }        
     }
-    
+    // this is the function end
+        
     echo '<pre>';
         print_r($arr);  
     echo '</pre>';
