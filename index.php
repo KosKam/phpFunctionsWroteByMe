@@ -19,9 +19,33 @@ if (isset($_POST["submit"])){
         }        
     }
     
-    echo '<pre>';
-        print_r($arr);  
-    echo '</pre>';
+    // Find bigges number    
+    $biggestNum = 0;
+    foreach ($arr as $v){
+        if ($biggestNum < $v) {
+            $biggestNum = $v;
+        }
+    }
+    // Find key of the biggest num
+    $biggestKey = "";
+    foreach ($arr as $k => $v){
+        if ($biggestNum == $v) {
+            $biggestKey = $k;
+        }
+    }
+    
+    echo "Most fricuant num is: $biggestKey -> $biggestNum <br>";
+    
+    foreach ($arr as $k => $v){
+        if ($biggestKey == $k) {
+            
+        }  else {
+            echo "Other num are: $k -> $v <br>";
+        }
+        
+    }
+    
+    
     
 }
 
