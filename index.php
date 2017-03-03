@@ -4,6 +4,7 @@ if (isset($_POST["submit"])){
     $string = $_POST["text"];
     $stringToArr = explode(", ", $string);
         
+    // This function count elements in array 
     // this is the function start
     $arr = [];
     $temp = "";
