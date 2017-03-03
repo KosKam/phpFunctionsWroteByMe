@@ -3,7 +3,8 @@ if (isset($_POST["submit"])){
         
     $string = $_POST["text"];
     $stringToArr = explode(", ", $string);
-    
+        
+    // this is the function start
     $arr = [];
     $temp = "";
     
@@ -17,7 +18,8 @@ if (isset($_POST["submit"])){
                 $arr[$stringToArr[$i]]++;                
             }
         }        
-    }
+    }    
+    // this is the function end
     
     // Find bigges number    
     $biggestNum = 0;
@@ -40,12 +42,15 @@ if (isset($_POST["submit"])){
         if ($biggestKey == $k) {
             
         }  else {
-            echo "Other num are: $k -> $v <br>";
+            echo "Other nums are: $k -> $v <br>";
         }
         
-    }
-    
-    
+    }  
+        
+    echo '<pre>';
+        print_r($arr);  
+    echo '</pre>';
+
     
 }
 
