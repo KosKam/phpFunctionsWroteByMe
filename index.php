@@ -5,7 +5,7 @@ if (isset($_POST["submit"])){
     $stringToArr = explode(", ", $string);
         
     // This function count elements in array 
-    // this is the function start
+    // this is the function start variant 1
     $arr = [];
     $temp = "";
     
@@ -20,7 +20,25 @@ if (isset($_POST["submit"])){
             }
         }        
     }    
-    // this is the function end
+     // this is the function end variant 1   
+   // this is the function start variant 2
+    session_start();
+
+    $tags = ["kos", "bos", "kos", "mos", "kos", "mos"];
+
+     if (!isset($_SESSION["tags"])) {
+        $_SESSION["tags"] = [];
+    }
+
+    $allTags = $_SESSION["tags"];
+    foreach ($tags as $tag){
+    
+    if (!array_key_exists($tag, $allTags)) {
+        $allTags[$tag] = 0;
+    }
+    $allTags[$tag]++;
+}
+    // this is the function end variant 2  
     
     // Find bigges number    
     $biggestNum = 0;
